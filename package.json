@@ -1,0 +1,16 @@
+{
+  "name": "jwpwai_20475-main",
+  "version": "1.0.0",
+  "description": "lab3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Posim Andrzej 20475",
+  "license": "ISC",
+  "dependencies": {
+    "string-width": "^7.2.0",
+    "strip-ansi": "^7.1.0"
+  },
+  "type": "module"
+}
