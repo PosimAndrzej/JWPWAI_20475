@@ -1,16 +1,94 @@
-import stripAnsi from 'strip-ansi';
-
-console.log('stripAnsi, jest modułem, który obcina ANSI escape code z tekstu. \nPozwala to na pozbycie się formatowania tekstu.');
-
-console.log('\u001B[4mUnicorn\u001B[0m');
-//=> 'Unicorn'
-
-console.log(stripAnsi('\u001B[4mUnicorn\u001B[0m'));
-//=> 'Unicorn'
-
-console.log('\u001B]8;;https://github.com\u0007Click\u001B]8;;\u0007');
-//=> 'Click'
-
-console.log(stripAnsi('\u001B]8;;https://github.com\u0007Click\u001B]8;;\u0007'));
-//=> 'Click'
-
+//Część 1
+/* 
+const http = require('http');
+const fs = require('fs');
+http.createServer(function(req, res) {
+    if (req.url == '/') {
+        fs.readFile('./titles.json', function(err, data) {
+            if (err) {
+                console.error(err);
+                res.end('titles.json error');
+            }
+            else {
+                const titles = JSON.parse(data.toString());
+                fs.readFile('./template.html', function(err, data) {
+                    if (err) {
+                        console.error(err);
+                        res.end('template.html error');
+                    }
+                    else {
+                        const tmpl = data.toString();
+                        const html = tmpl.replace('%', titles.join('</li><li>'));
+                        res.writeHead(200, {'Content-Type': 'text/html'});
+                        res.end(html);
+                    }
+                });
+            }
+        });
+    }
+}).listen(8000, "127.0.0.1");
+*/
+//Część 2
+/*
+const http = require('http');
+const fs = require('fs');
+const server = http.createServer(function (req, res) {
+    getTitles(res);
+}).listen(8000, "127.0.0.1");
+function getTitles(res) {
+    fs.readFile('./titles.json', function (err, data) {
+        if (err) {
+            hadError(err, res);
+        }
+        else {
+            getTemplate(JSON.parse(data.toString()), res);
+        }
+    });
+}
+function getTemplate(titles, res) {
+    fs.readFile('./template.html', function (err, data) {
+        if (err) {
+            hadError(err, res);
+        }
+        else {
+            formatHtml(titles, data.toString(), res);
+        }
+    });
+}
+function formatHtml(titles, tmpl, res) {
+    let html = tmpl.replace('%', titles.join('</li><li>'));
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(html);
+}
+function hadError(err, res) {
+    console.error(err);
+    res.end('Error');
+}
+*/
+//Część 2 - zadanie
+const http = require('http');
+const fs = require('fs');
+const server = http.createServer(function (req, res) {
+    getTitles(res);
+}).listen(8000, "127.0.0.1");
+function getTitles(res) {
+    fs.readFile('./titles.json', function (err, data) {
+        if (err) return hadError(err, res);
+        getTemplate(JSON.parse(data.toString()), res);
+    });
+}
+function getTemplate(titles, res) {
+    fs.readFile('./template.html', function (err, data) {
+        if (err) return hadError(err, res);
+        formatHtml(titles, data.toString(), res);
+    });
+}
+function formatHtml(titles, tmpl, res) {
+    let html = tmpl.replace('%', titles.join('</li><li>'));
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(html);
+}
+function hadError(err, res) {
+    console.error(err);
+    res.end('Error');
+}
