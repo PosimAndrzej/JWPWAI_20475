@@ -1,3 +1,4 @@
+//wersja 1
 let canadianDollar = 2.89;
 let usDollar = 4.02;
 let gbp = 5.21;

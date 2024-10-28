@@ -1,3 +1,4 @@
+//wersja 1
 let currency = require('./currency1');
 
 console.log('50 dolarów kanadyjskich odpowiada następującej ilości złotych:');
