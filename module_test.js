@@ -1,5 +1,5 @@
-//zad 2 wersja 1
-const math1 = require('./myMathModule1');
+//zad 2 wersja 2
+const Math2 = require('./myMathModule2');
 
 const readline = require("readline");
 const r1 = readline.createInterface({
@@ -7,14 +7,15 @@ const r1 = readline.createInterface({
     output: process.stdout
 });
 
-r1.question("Put 1st number",function(number1) {
-    r1.question("Put 2nd number",function(number2){
-        console.log(number1+"%"+number2+"="+math1.mod(number1,number2));
-        console.log(number1+"-"+number2+"="+math1.sub(number1,number2));
-        console.log(number1+"*"+number2+"="+math1.mul(number1,number2));
-        console.log(number1+"^2"+"="+math1.pow(number1));
-        console.log(number2+"^2"+"="+math1.pow(number2));
-        console.log(number1+"/"+number2+"="+math1.div(number1,number2));
+r1.question("Put 1st number ",function(number1) {
+    r1.question("Put 2nd number ",function(number2){
+        let math2 = new Math2(number1,number2);
+        console.log(number1+"%"+number2+"="+math2.mod());
+        console.log(number1+"-"+number2+"="+math2.sub());
+        console.log(number1+"*"+number2+"="+math2.mul());
+        console.log(number1+"^2"+"="+math2.pow1());
+        console.log(number2+"^2"+"="+math2.pow2());
+        console.log(number1+"/"+number2+"="+math2.div());
         r1.close();
     })
 });
