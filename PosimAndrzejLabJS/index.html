@@ -2,52 +2,29 @@
 <html lang="pl">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Programowanie w JAVASCRIPT - template">
-	<meta name="author" content="dr inż. Jacek Paluszak">
-	<link rel="icon" href="img/favicon.ico">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lab6">
+<meta name="author" content="Posim Andrzej 20475">
+<link rel="icon" href="img/favicon.ico">
 
-	<title>Programowanie w JAVASCRIPT</title>
+<title>Programowanie w JAVASCRIPT</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-	<link href="css/navbar-fixed-top.css" rel="stylesheet">
-	<script src="js/ie-emulation-modes-warning.js"></script>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+<link href="css/navbar-fixed-top.css" rel="stylesheet">
+<script src="js/ie-emulation-modes-warning.js"></script>
 
-	<!-- jQuery  -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
-	<script src="js/jquery.easing.1.3.min.js"></script>
-	<script src="js/jquery.easing.compatibility.js"></script>
+<!-- jQuery  -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+<script src="js/jquery.easing.1.3.min.js"></script>
+<script src="js/jquery.easing.compatibility.js"></script>
 
-	<!-- Zad. 1 -->
-	<script>
-		let score = 0;
-		let q = 0;
-		const questions = [
-			['Ile to 12*12?', 144],
-			['Ile to 15*15?', 225],
-			['Ile to 18*18?', 324]
-		];
-		function nextQ() {
-			testQuestion(questions[q]);
-			q++;
-			showQ();
-		}
-		function testQuestion(question) {
-			let answer = document.forms[0].anw.value;
-			if (answer == question[1]) {
-				score++;
-			}
-			else {
-				alert("Poprawna odpowiedź to: " + question[1]);
-			}
-		}
-	</script>
+
 </head>
 
 <body>
@@ -58,36 +35,30 @@
 
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
-						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-						aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">
-					<img src="img/logo512x128.png"
-						 height="40" alt="">
-				</a> <a class="navbar-brand logotext" href="#">Laboratorium</a>
+				<a class="navbar-brand" href="#"><img src="img/logo512x128.png"
+					height="40" alt=""></a> <a class="navbar-brand logotext" href="#">Laboratorium</a>
 			</div>
 
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="#main-page"
-						   class="btn btn-primary" title="Strona główna">
-							<span class="glyphicon glyphicon-home"></span>
-						</a>
-					</li>
+					<li class="active"><a href="#main-page"
+						class="btn btn-primary" title="Strona główna"> <span
+							class="glyphicon glyphicon-home"></span>
+					</a></li>
 					<li><a href="#projekt1">Projekt 1</a></li>
 					<li><a href="#projekt2">Projekt 2</a></li>
-					<li>
-						<a href="#form" data-toggle="modal"
-						   data-target="#ModalForm">Kontakt</a>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle"
-						   data-toggle="dropdown" role="button" aria-haspopup="true"
-						   aria-expanded="false">
-							Opcje <span class="caret"></span>
-						</a>
+					<li><a href="#form" data-toggle="modal"
+						data-target="#ModalForm">Kontakt</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">Opcje <span class="caret"></span>
+					</a>
 						<ul class="dropdown-menu">
 							<li><a href="#">Akcja 1</a></li>
 							<li><a href="#">Akcja 2</a></li>
@@ -96,8 +67,7 @@
 							<li class="dropdown-header">Linki</li>
 							<li><a href="#">Link 1</a></li>
 							<li><a href="#">Link 2</a></li>
-						</ul>
-					</li>
+						</ul></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
@@ -116,7 +86,7 @@
 						<p>nazwisko:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Kowalski</p>
+						<p>Posim</p>
 					</div>
 				</div>
 				<div class="row">
@@ -124,7 +94,7 @@
 						<p>imię:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Jan</p>
+						<p>Andrzej</p>
 					</div>
 				</div>
 				<div class="row">
@@ -140,7 +110,7 @@
 						<p>email:</p>
 					</div>
 					<div class="col-md-4">
-						<p>999@student.ans-elblag.pl</p>
+						<p>20475@student.ans-elblag.pl</p>
 					</div>
 				</div>
 				<div class="row">
@@ -148,7 +118,7 @@
 						<p>nr indeksu:</p>
 					</div>
 					<div class="col-md-4">
-						<p>999</p>
+						<p>20475</p>
 					</div>
 				</div>
 
@@ -162,35 +132,46 @@
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Projekt 1</h1>
+				
+				<p class="pq">To, że milczę, nie znaczy, że nie mam nic do powiedzenia.</p><br><hr>
+				<p class="pq">Lepiej zaliczać się do niektórych, niż do wszystkich.</p><br><hr>
+				<p>Dobrze widzi się tylko sercem. Najważniejsze jest niewidoczne dla oczu.</p><br><hr>
+				<p>Czytanie książek to najpiękniejsza zabawa, jaką sobie ludzkość wymyśliła.</p><br><hr>
+				<span class="pq">Apetyt rośnie w miarę jedzenia.</span><br><hr>
+				<span>Biednemu zawsze wiatr w oczy.</span><br><hr>
+				<span>Co dwie głowy, to nie jedna.</span><br><hr>
+				<span class="pq">Cel uświęca środki.</span><br><hr>
 
-				<p>Miejsce na projekt laboratoryjny</p>
-				<form>
-					<input type="number" name="anw" />
-				</form>
-				<p><button onclick="nextQ()">Następne pytanie</button></p>
-				<span></span>
 			</div>
 		</div>
 	</section>
 
 
+	<section id="projekt2">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Projekt 2</h1>
+				
+				<p>Miejsce na projekt laboratoryjny</p>
+				
+			</div>
+		</div>
+	</section>
 
 	<footer>
 		<div class="container" style="margin-top: 5%">
 			<button type="button" class="btn btn-link" data-toggle="modal"
-					data-target="#myModal">
-				Polityka prywatności
-			</button>
+				data-target="#myModal">Polityka prywatności</button>
 		</div>
 	</footer>
 
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-		 aria-labelledby="myModalLabel">
+		aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
-							aria-label="close">
+						aria-label="close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<h4 class="modal-title" id="myModalLabel1">Polityka prywatności</h4>
@@ -198,21 +179,19 @@
 				<div class="modal-body">polityka prywatności...</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default btn-warning btn-sm"
-							data-dismiss="modal">
-						Close
-					</button>
+						data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="modal fade" id="ModalForm" tabindex="-1" role="dialog"
-		 aria-labelledby="myModalLabel">
+		aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
-							aria-label="close">
+						aria-label="close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 					<h4 class="modal-title" id="myModalLabel2">Kontakt</h4>
@@ -220,14 +199,12 @@
 				<div class="modal-body">
 					<section id="form" style="margin-top: 5%">
 						<form action="index.html#kontakt" method="post"
-							  onsubmit="return checkForm();">
+							onsubmit="return checkForm();">
 							<fieldset>
 								<div class="row">
 									<div class="col-md-12">
-										<p class="hide" id="errorName">
-											Podanie imienia jest
-											wymagane!
-										</p>
+										<p class="hide" id="errorName">Podanie imienia jest
+											wymagane!</p>
 									</div>
 								</div>
 								<div class="row" id="success">
@@ -236,17 +213,16 @@
 									</div>
 									<div class="col-md-4">
 										<input type="text" class="form-control " id="contactName"
-											   aria-describedby="inputSuccess5Status" onblur="checkName()" />
-										<span class="hide" aria-hidden="true" id="true"></span> <span id="inputSuccess5Status" class="sr-only">(success)</span>
+											aria-describedby="inputSuccess5Status" onblur="checkName()" />
+										<span class="hide" aria-hidden="true" id="true"></span> <span
+											id="inputSuccess5Status" class="sr-only">(success)</span>
 									</div>
 								</div>
 								<br>
 								<div class="row">
 									<div class="col-md-12">
-										<p class="hide" id="errorLastName">
-											Podanie nazwiska jest
-											wymagane!
-										</p>
+										<p class="hide" id="errorLastName">Podanie nazwiska jest
+											wymagane!</p>
 									</div>
 								</div>
 								<div class="row" id="success2">
@@ -255,18 +231,17 @@
 									</div>
 									<div class="col-md-4">
 										<input type="text" class="form-control " id="contactLastName"
-											   aria-describedby="inputSuccess5Status"
-											   onblur="checkLastName()" /> <span class="hide"
-																	  aria-hidden="true" id="true2"></span> <span id="inputSuccess5Status2" class="sr-only">(success)</span>
+											aria-describedby="inputSuccess5Status"
+											onblur="checkLastName()" /> <span class="hide"
+											aria-hidden="true" id="true2"></span> <span
+											id="inputSuccess5Status2" class="sr-only">(success)</span>
 									</div>
 								</div>
 								<br>
 								<div class="row">
 									<div class="col-md-12">
-										<p class="hide" id="errorEmail">
-											Podanie emaila jest
-											wymagane!
-										</p>
+										<p class="hide" id="errorEmail">Podanie emaila jest
+											wymagane!</p>
 										<p class="hide" id="errorEmail2">Błędny email!</p>
 									</div>
 								</div>
@@ -276,8 +251,9 @@
 									</div>
 									<div class="col-md-4">
 										<input type="text" class="form-control " id="contactEmail"
-											   aria-describedby="inputSuccess5Status" onblur="checkEmail()" />
-										<span class="hide" aria-hidden="true" id="true3"></span> <span id="inputSuccess5Status3" class="sr-only">(success)</span>
+											aria-describedby="inputSuccess5Status" onblur="checkEmail()" />
+										<span class="hide" aria-hidden="true" id="true3"></span> <span
+											id="inputSuccess5Status3" class="sr-only">(success)</span>
 									</div>
 								</div>
 								<br>
@@ -287,7 +263,7 @@
 									</div>
 									<div class="col-md-4">
 										<textarea name="Informacje" cols="30" rows="7" id="Info"
-												  maxlength="250"></textarea>
+											maxlength="250"></textarea>
 									</div>
 								</div>
 								<br>
@@ -303,9 +279,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default btn-warning btn-sm"
-							data-dismiss="modal">
-						Close
-					</button>
+						data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -315,40 +289,17 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/ie10-viewport-bug-workaround.js"></script>
 	<script src="js/forms.js"></script>
-
-	<!-- Wypełnienie danych studenta-->
 	<script>
-		const x = document.getElementById("main-page");
-		const y = x.getElementsByTagName("p");
-		y[1].innerHTML = "Posim";
-		y[3].innerHTML = "Andrzej";
-		y[5].innerHTML = "1";
-		y[7].innerHTML = "20475@student.ans-elblag.pl";
-		y[9].innerHTML = "20475";
+		$(document).ready(function() {
+			$('span.pq').each(function() {
+				const quote=$(this).clone();
+				quote.removeClass('pq');
+				quote.addClass('pullquote');
+				$(this).before(quote);
+			}); // koniec funkcji each
+		}); // koniec funkcji ready
 	</script>
-
-	<!-- Zad.1 Sekcja wynikowa-->
-	<script>
-        function showQ() {
-            let sq = document.getElementById("projekt1").getElementsByTagName("p");
-            if (q < questions.length) {
-                sq[0].innerHTML = questions[q][0];
-            }
-			else {
-
-                sq[0].innerHTML = "";
-				sq[1].innerHTML = "";
-				document.forms[0].innerHTML = "";
-			}
-            let message = 'Liczba punktów: ' + score;
-            message += ' z ' + questions.length;
-            message += '.';
-            let p1 = document.getElementById("projekt1");
-            let p2 = p1.getElementsByTagName("span");
-            p2[0].innerHTML = "<p>" + message + "</p>";
-		}
-		showQ();
-	</script>
+		
 </body>
 
-</html >
+</html>
