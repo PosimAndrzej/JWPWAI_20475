@@ -178,16 +178,16 @@
 				
 				<form>
 					<input type="button" value="Kliknij mnie" id="klik">
-					<input type="button" value="1" class="cz4">
-					<input type="button" value="2" class="cz4">
-					<input type="button" value="3" class="cz4">
-					<input type="button" value="4" class="cz4">
-					<input type="button" value="5" class="cz4">
-					<input type="button" value="6" class="cz4">
-					<input type="button" value="7" class="cz4">
-					<input type="button" value="8" class="cz4">
-					<input type="button" value="9" class="cz4">
-					<input type="button" value="10" class="cz4">
+					<input type="button" value="1" id="cz41">
+					<input type="button" value="2" id="cz42">
+					<input type="button" value="3" id="cz43">
+					<input type="button" value="4" id="cz44">
+					<input type="button" value="5" id="cz45">
+					<input type="button" value="6" id="cz46">
+					<input type="button" value="7" id="cz47">
+					<input type="button" value="8" id="cz48">
+					<input type="button" value="9" id="cz49">
+					<input type="button" value="10" id="cz410">
 				</form>
 				
 			</div>
@@ -345,11 +345,9 @@
 
 		// Zad 2 cz 2
 		
-		$('#projekt3').mouseover(function(){
-			$('a').mouseover(function(){
-				const message = "<p>Wskazałeś odnośnik myszą!</p>";
-				$('.main').append(message);
-			});// koniec funkcji mouseover
+		$('#projekt3 a').mouseover(function(){
+			const message = "<p>Wskazałeś odnośnik myszą!</p>";
+			$('.main').append(message);
 		});// koniec funkcji mouseover
 
 		// Zad 2 cz 3
@@ -358,12 +356,130 @@
 		})// koniec funkcji click
 
 		// Zad 2 cz 4
-		$('.cz4').click(function(){
-			let val = ($this).val;
-			if(val=='1'){
-				
-			}
-			
+		$('#cz41').click(function(){
+			$('#projekt3 a').each(function() {
+				$(this).addClass('pq');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'a'<br> Nadano klasę pq w #projekt3<br>Ustawiono:<ul><li>kolor: black<li>czcionka: Arial<li>wielkość czcionki: 20px<li>kolor tła: white</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz41').val("1. kliknięty");
+		})
+		$('#cz42').click(function(){
+			$('#projekt3 a').each(function() {
+				$(this).removeClass('pq');
+				$(this).css('color','red');
+				$(this).css('font-family','Lucida Console');
+				$(this).css('font-size','24px');
+				$(this).css('background-color','black');
+			}); // koniec funkcji each
+			//kolor, czcionka, wielkość czcionki + dowolny atrybut
+			const message = "<hr><p>TAG: 'a'<br> Usunięto klasę pq w #projekt3<br>Ustawiono:<ul><li>kolor: red<li>czcionka: Lucida Console<li>wielkość czcionki: 24px<li>kolor tła: black</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz42').val("2. kliknięty");
+		})
+		$('#cz43').click(function(){
+			$('#projekt1 span').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','green');
+				$(this).css('font-family','Lucida Console');
+				$(this).css('font-size','24px');
+				$(this).css('background-color','gray');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'span'<br> Usunięto klasy pq i pullquote w #projekt1<br>Ustawiono:<ul><li>kolor: green<li>czcionka: Lucida Console<li>wielkość czcionki: 24px<li>kolor tła: gray</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz43').val("3. kliknięty");
+		})
+		$('#cz44').click(function(){
+			$('#projekt1 span').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','blue');
+				$(this).css('font-family','Lucida Console');
+				$(this).css('font-size','26px');
+				$(this).css('background-color','black');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'span'<br> Usunięto klasy pq i pullquote w #projekt1<br>Ustawiono:<ul><li>kolor: blue<li>czcionka: Lucida Console<li>wielkość czcionki: 26px<li>kolor tła: black</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz44').val("4. kliknięty");
+		})
+		$('#cz45').click(function(){
+			$('#projekt1 p').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','green');
+				$(this).css('font-family','Lucida Console');
+				$(this).css('font-size','24px');
+				$(this).css('background-color','gray');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'p'<br> Usunięto klasy pq i pullquote w #projekt1<br>Ustawiono:<ul><li>kolor: green<li>czcionka: Lucida Console<li>wielkość czcionki: 24px<li>kolor tła: gray</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz45').val("5. kliknięty");
+		})
+		$('#cz46').click(function(){
+			$('#projekt1 p').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','blue');
+				$(this).css('font-family','Lucida Console');
+				$(this).css('font-size','26px');
+				$(this).css('background-color','black');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'p'<br> Usunięto klasy pq i pullquote w #projekt1<br>Ustawiono:<ul><li>kolor: blue<li>czcionka: Lucida Console<li>wielkość czcionki: 26px<li>kolor tła: black</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz46').val("6. kliknięty");
+		})
+		$('#cz47').click(function(){
+			$('h1').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','purple');
+				$(this).css('font-family','Papyrus');
+				$(this).css('font-size','40px');
+				$(this).css('text-align','center');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'h1'<br> Usunięto klasy pq i pullquote<br>Ustawiono:<ul><li>kolor: purple<li>czcionka: Papyrus<li>wielkość czcionki: 40px<li>orientacja czcionki: center</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz47').val("7. kliknięty");
+		})
+		$('#cz48').click(function(){
+			$('h1').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','blue');
+				$(this).css('font-family','Lucida Handwriting');
+				$(this).css('font-size','50px');
+				$(this).css('text-align','right');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'h1'<br> Usunięto klasy pq i pullquote<br>Ustawiono:<ul><li>kolor: blue<li>czcionka: Lucida Handwriting<li>wielkość czcionki: 50px<li>orientacja czcionki: right</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz48').val("8. kliknięty");
+		})
+		$('#cz49').click(function(){
+			$('#projekt4 input').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','red');
+				$(this).css('font-family','Copperplate');
+				$(this).css('font-size','25px');
+				$(this).css('background-color','gray');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'input'<br> Usunięto klasy pq i pullquote w #projekt4<br>Ustawiono:<ul><li>kolor: red<li>czcionka: Copperplate<li>wielkość czcionki: 25px<li>kolor tła: black</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz49').val("9. kliknięty");
+		})
+		$('#cz410').click(function(){
+			$('#projekt4 input').each(function() {
+				$(this).removeClass('pullquote');
+				$(this).removeClass('pq');
+				$(this).css('color','white');
+				$(this).css('font-family','Lucida Handwriting');
+				$(this).css('font-size','20px');
+				$(this).css('background-color','black');
+			}); // koniec funkcji each
+			const message = "<hr><p>TAG: 'input'<br> Usunięto klasy pq i pullquote w #projekt4<br>Ustawiono:<ul><li>kolor: white<li>czcionka: Lucida Handwriting<li>wielkość czcionki: 20px<li>kolor tła: black</ul></p><hr>";
+			$('.main').append(message);
+			$('#cz410').val("10. kliknięty");
 		})
 	</script>
 		
