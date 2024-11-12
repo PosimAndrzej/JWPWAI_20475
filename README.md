@@ -1,7 +1,7 @@
 # JWPWAI_20475
 # Posim Andrzej 20475
 # Uwaga:
-Część 2 zadania 3 w laboratorium 6 (Projekt 7) może nie działać bez odświeżenia strony.
+Lab 7 w osobnym repozytorium.
 # Linki:
 # Repozytorium Lab7:
 https://github.com/PosimAndrzej/JWPWAI_20475_React
