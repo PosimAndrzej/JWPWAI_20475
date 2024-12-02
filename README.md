@@ -16,3 +16,7 @@ https://posimandrzej.github.io/JWPWAI_20475_React_2/
 https://github.com/PosimAndrzej/JWPWAI_20475_React_3
 ## Strona lab9:
 https://posimandrzej.github.io/JWPWAI_20475_React_3/
+## Repozytorium Lab10:
+https://github.com/PosimAndrzej/JWPWAI_20475_nextjs_1
+## Strona lab10:
+https://posimandrzej.github.io/JWPWAI_20475_nextjs_1/
