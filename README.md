@@ -24,3 +24,7 @@ https://posimandrzej.github.io/JWPWAI_20475_nextjs_1/
 https://github.com/PosimAndrzej/JWPWAI_20475_nextjs_2
 ## Strona lab11:
 https://jwpwai-20475-nextjs-2.vercel.app/
+## Repozytorium Lab12:
+https://github.com/PosimAndrzej/JWPWAI_20475_nextjs_3
+## Strona Lab12:
+https://jwpwai-20475-nextjs-3.vercel.app/
