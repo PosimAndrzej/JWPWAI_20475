@@ -28,3 +28,8 @@ https://jwpwai-20475-nextjs-2.vercel.app/
 https://github.com/PosimAndrzej/JWPWAI_20475_nextjs_3
 ## Strona Lab12:
 https://jwpwai-20475-nextjs-3.vercel.app/
+## Repozytorium Lab13:
+https://github.com/PosimAndrzej/JWPWAI_20475_nextjs_4
+## Strona Lab13:
+https://jwpwai-20475-nextjs-4.onrender.com/
+
